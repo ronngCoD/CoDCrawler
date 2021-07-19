@@ -4,7 +4,6 @@ from tqdm import tqdm
 import json
 from selenium import webdriver
 from bs4 import BeautifulSoup
-from bs4 import Comment
 import requests
 import lxml
 import cchardet
