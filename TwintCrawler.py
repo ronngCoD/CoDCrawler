@@ -1,5 +1,4 @@
 import twint
-import json
 
 def scrape(keyword, limit):
     # configuration
