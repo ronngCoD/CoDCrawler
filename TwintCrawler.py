@@ -13,7 +13,7 @@ def scrape(keyword, limit):
     twint.run.Search(config)
 
 if __name__ == "__main__":
-    searchWord = '#payup'
+    searchWord = '#garmentworkers'
     scrape(searchWord, limit=1000)
 
 
