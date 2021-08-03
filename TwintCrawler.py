@@ -14,7 +14,7 @@ def scrape(keyword, limit):
 
 if __name__ == "__main__":
     searchWord = '#payup'
-    scrape(searchWord, limit=200)
+    scrape(searchWord, limit=1000)
 
 
 
