@@ -1,4 +1,5 @@
 import twint
+import shutil
 
 def scrape(keyword, limit):
     # configuration
@@ -14,6 +15,10 @@ def scrape(keyword, limit):
 if __name__ == "__main__":
     searchWord = '#payyourworkers'
     scrape(searchWord, limit=1000)
+    file = searchWord + ".txt"
+    original = r'C:\Users\pc-179\PycharmProjects\CoDCrawler\\' + file
+    target = r'C:\Users\pc-179\PycharmProjects\CoDCrawler\data'
+    shutil.move(original, target)
 
 
 
