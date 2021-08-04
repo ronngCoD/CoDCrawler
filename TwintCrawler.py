@@ -1,3 +1,4 @@
+import os
 import twint
 import shutil
 
@@ -8,17 +9,17 @@ def scrape(keyword, limit):
     config.Lang = "en"
     config.Limit = limit
     config.Store_json = True
-    config.Output = keyword + ".txt"
+    config.Output = "twint " + keyword + ".txt"
     # running search
     twint.run.Search(config)
 
 if __name__ == "__main__":
-    searchWord = '#payyourworkers'
+    searchWord = '#shareyourprofits'
     scrape(searchWord, limit=1000)
-    file = searchWord + ".txt"
-    original = r'C:\Users\pc-179\PycharmProjects\CoDCrawler\\' + file
+    file = "twint " + searchWord + ".txt"
+    original = r'C:\Users\pc-179\PycharmProjects\CoDCrawler'
     target = r'C:\Users\pc-179\PycharmProjects\CoDCrawler\data'
-    shutil.move(original, target)
+    shutil.move(os.path.join(original, file), os.path.join(target, file))
 
 
 
